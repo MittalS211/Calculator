@@ -1,0 +1,71 @@
+<! doctype html>
+<html>
+<head> 
+    <title> Calculator </title>
+    <link style="stylesheet.css">
+    </head>
+    <body>
+    <div class="display">
+        <h1>Calculator</h1>
+        <input type="text" readonly id="display" size="15px">
+        </div>
+        <div class="keys">
+            <input type="button" value="0" onclick="addValue('0')">
+            <input type="button" value="1" onclick="addValue('1')">
+            <input type="button" value="2" onclick="addValue('2')">
+            <input type="button" value="3" onclick="addValue('3')">
+            <br>
+            <input type="button" value="4" onclick="addValue('4')">
+            <input type="button" value="5" onclick="addValue('5')">
+            <input type="button" value="6" onclick="addValue('6')">
+            <input type="button" value="7" onclick="addValue('7')">
+            <br>
+            <input type="button" value="8" onclick="addValue('8')">
+            <input type="button" value="9" onclick="addValue('9')">
+            <input type="button" value="+" onclick="addValue('+')">
+            <input type="button" value="-" onclick="addValue('-')">
+            <br>
+            <input type="button" value="*" onclick="addValue('*')">
+            <input type="button" value="/" onclick="addValue('/')">
+            <input type="button" value="REM" onclick="addValue('%')">
+            <input type="button" value="CLR" onclick="addValue("")">
+            <input type="button" value="=" onclick="evaluation()">
+            
+            </div>
+    <script>
+        function assignValue(val)
+        {
+            document.getElementById("display").value=val;
+        }
+        function addValue(val)
+        {
+            document.getElementById("display").value+=val;
+        }
+        function evaluation()
+        {
+            try
+                {
+                    assignValue(eval(document.getElementById("display").value));
+                }
+            catch(evaluation)
+                {
+                assignValue("Error");
+        }
+        }
+        
+        
+        
+        </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
